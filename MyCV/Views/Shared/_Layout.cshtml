@@ -10,6 +10,7 @@
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
     <link href="~/css/ZabutoStyle.css" rel="stylesheet" />
+    <link href="~/css/navbar-hover.css" rel="stylesheet" />
     <style type="text/css">
         body {
             background-color: dimgrey;
@@ -20,6 +21,7 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -31,6 +33,7 @@
                 @Html.ActionLink("Home", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
             </div>
 
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -40,16 +43,38 @@
                     </li>
 
                     <li id="portfolio" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
                         <ul class="dropdown-menu">
                             <li id="1columnportfolio">
-                                @Html.ActionLink("1 Column Portfolio", "OneColumn", "Portfolio")
+                                @Html.ActionLink("Raspberry Pi", "OneColumn", "Raspberry Pi")
+                            </li>
+
+                            <li id="arduino" class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-menu-right" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arduino<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" aria-labelledby="arduino1">
+                                        <li class="dropdown-item" href="#">
+                                            @Html.ActionLink("Arduino1", "OneColumn", "Arduino1")
+                                        </li>
+                                        <li class="dropdown-item" href="#">
+                                            @Html.ActionLink("Arduino2", "OneColumn", "Arduino2")
+                                        </li>
+                                        <li class="dropdown-item" href="#">
+                                            @Html.ActionLink("Arduino3", "OneColumn", "Arduino3")
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            <li id="1columnportfolio">
+                                @Html.ActionLink("3 Portfolio", "OneColumn", "3 Portfolio")
+                            </li>
+                            <li id="1columnportfolio">
+                                @Html.ActionLink("2 Portfolio", "OneColumn", "2 Portfolio")
                             </li>
                         </ul>
                     </li>
 
                     <li id="other" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages<b class="caret"></b></a>
                         <ul class="dropdown-menu">
 
                             <li id="faq">
@@ -62,18 +87,25 @@
                     <li id="contact">
                         @Html.ActionLink("Contact", "Index", "Contact")
                     </li>
+
                     <li id="about">
                         @Html.ActionLink("About", "Index", "About")
                     </li>
+
                     <li>
                         @Html.ActionLink("Login", "Index", "Login")
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
+
+
+
 
     @RenderBody()
 
@@ -95,5 +127,6 @@
     <script src="@Url.Content("/js/bootstrap.js")"></script>
     <script src="@Url.Content("/js/modern-business.js")"></script>
     <script src="~/js/ZabutoCalendar.js"></script>
+    <script src="~/js/navbar-hover.js"></script>
 </body>
 </html>
