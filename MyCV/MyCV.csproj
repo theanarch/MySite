@@ -177,19 +177,31 @@
     <Compile Include="ViewModels\AccountViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-dropdownhover.min.css" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\modern-business.css" />
-    <Content Include="css\navbar-hover.css" />
+    <Content Include="css\navbar.css" />
     <Content Include="css\ZabutoStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\moretocome.png" />
+    <Content Include="Images\Contact\github.svg" />
+    <Content Include="Images\Contact\linkedin.svg" />
+    <Content Include="Images\Contact\location.svg" />
+    <Content Include="Images\Contact\mail.svg" />
+    <Content Include="Images\Contact\phone.svg" />
+    <Content Include="Images\Contact\skype.svg" />
+    <Content Include="Images\Portfolio\arduino.jpg" />
+    <Content Include="Images\Portfolio\rpi.jpg" />
+    <Content Include="Images\Portfolio\ToDoiOS.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact_me.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\navbar-hover.js" />
     <Content Include="js\ZabutoCalendar.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -205,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\About\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -229,13 +242,22 @@
     <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\OneColumn.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Other\Faq.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Error\PageNotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\ArduinoGeneral.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\RaspberryPiGeneral.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\IOSGeneral.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\WebDevGeneral.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

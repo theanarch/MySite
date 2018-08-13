@@ -10,7 +10,7 @@
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
     <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
     <link href="~/css/ZabutoStyle.css" rel="stylesheet" />
-    <link href="~/css/navbar-hover.css" rel="stylesheet" />
+    <link href="~/css/navbar.css" rel="stylesheet" />
     <style type="text/css">
         body {
             background-color: dimgrey;
@@ -19,9 +19,11 @@
 </head>
 <body>
 
+    <!--Starting navbar-->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
 
+            <!---->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -29,7 +31,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                 @Html.ActionLink("Home", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
             </div>
 
@@ -43,58 +44,37 @@
                     </li>
 
                     <li id="portfolio" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
-                        <ul class="dropdown-menu">
-                            <li id="1columnportfolio">
-                                @Html.ActionLink("Raspberry Pi", "OneColumn", "Raspberry Pi")
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-level">
+                            <li class="dropdown-submenu">
+                                <a href="~/Views/Portfolio/Arduino.cshtml" class="nav-link dropdown-menu-right" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arduino</a>
+                                <ul class="dropdown-menu" aria-labelledby="arduino1">
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("General", "ArduinoGeneral", "Portfolio")</li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("Arduino1", "Project1", "Portfolio")</li>
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("Arduino2", "Project2", "Portfolio")</li>
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("Arduino3", "Project3", "Portfolio")</li>
+                                </ul>
                             </li>
-
-                            <li id="arduino" class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-menu-right" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arduino<b class="caret"></b></a>
-                                    <ul class="dropdown-menu" aria-labelledby="arduino1">
-                                        <li class="dropdown-item" href="#">
-                                            @Html.ActionLink("Arduino1", "OneColumn", "Arduino1")
-                                        </li>
-                                        <li class="dropdown-item" href="#">
-                                            @Html.ActionLink("Arduino2", "OneColumn", "Arduino2")
-                                        </li>
-                                        <li class="dropdown-item" href="#">
-                                            @Html.ActionLink("Arduino3", "OneColumn", "Arduino3")
-                                        </li>
-                                    </ul>
-                                </li>
-
-                            <li id="1columnportfolio">
-                                @Html.ActionLink("3 Portfolio", "OneColumn", "3 Portfolio")
+                            <li class="dropdown-submenu">
+                                <a href="#" class="nav-link dropdown-menu-right" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">iOS Apps</a>
+                                <ul class="dropdown-menu" aria-labelledby="arduino1">
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("General", "IOSGeneral", "Portfolio")</li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("ToDo-list", "ToDoApp", "Portfolio")</li>
+                                    <li class="dropdown-item" href="#">@Html.ActionLink("Strength Training", "StrengthApp", "Portfolio")</li>
+                                </ul>
                             </li>
-                            <li id="1columnportfolio">
-                                @Html.ActionLink("2 Portfolio", "OneColumn", "2 Portfolio")
-                            </li>
+                            <li id="1columnportfolio">@Html.ActionLink("Raspberry Pi", "RaspberryPiGeneral", "Portfolio")</li>
+                            <li id="1columnportfolio">@Html.ActionLink("Web Development", "WebDevGeneral", "Portfolio")</li>
                         </ul>
                     </li>
 
-                    <li id="other" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
 
-                            <li id="faq">
-                                @Html.ActionLink("FAQ", "Faq", "Other")
-                            </li>
 
-                        </ul>
-                    </li>
-
-                    <li id="contact">
-                        @Html.ActionLink("Contact", "Index", "Contact")
-                    </li>
-
-                    <li id="about">
-                        @Html.ActionLink("About", "Index", "About")
-                    </li>
-
-                    <li>
-                        @Html.ActionLink("Login", "Index", "Login")
-                    </li>
+                    <li id="about">@Html.ActionLink("About", "Index", "About")</li>
+                    <li id="about">@Html.ActionLink("Contact", "Index", "Contact")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
 
                 </ul>
             </div>
@@ -103,30 +83,23 @@
         <!-- /.container -->
     </nav>
 
-
-
-
-
     @RenderBody()
 
+    <!--Footer-->
     <div class="container">
-
         <hr>
-
         <footer align="center">
             <div class="row">
                 <p>Copyright &copy; Boris Torbica 2018</p>
                 <p>A Boris Site Edition</p>
             </div>
         </footer>
-
     </div>
     <!-- /.container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="@Url.Content("/js/bootstrap.js")"></script>
     <script src="@Url.Content("/js/modern-business.js")"></script>
     <script src="~/js/ZabutoCalendar.js"></script>
-    <script src="~/js/navbar-hover.js"></script>
 </body>
 </html>
