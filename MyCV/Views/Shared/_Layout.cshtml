@@ -11,10 +11,17 @@
     <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
     <link href="~/css/ZabutoStyle.css" rel="stylesheet" />
     <link href="~/css/navbar.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+
     <style type="text/css">
         body {
             background-color: dimgrey;
         }
+
+        #loginPartial {
+            box-shadow: -14px 0 0 -12px grey
+        }
+        /* left padding creates a gap between links */
     </style>
 </head>
 <body>
@@ -72,8 +79,10 @@
 
 
 
-                    <li id="about">@Html.ActionLink("About", "Index", "About")</li>
-                    <li id="about">@Html.ActionLink("Contact", "Index", "Contact")</li>
+                    <li>@Html.ActionLink("About", "Index", "About")</li>
+                    <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+
+                    <li id="loginPartial">@Html.ActionLink("Register", "Register", "Login")</li>
                     <li>@Html.ActionLink("Login", "Index", "Login")</li>
 
                 </ul>

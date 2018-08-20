@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OtherController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -182,6 +183,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\modern-business.css" />
     <Content Include="css\navbar.css" />
     <Content Include="css\ZabutoStyle.css" />
@@ -258,6 +260,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Portfolio\WebDevGeneral.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\blackLetter.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

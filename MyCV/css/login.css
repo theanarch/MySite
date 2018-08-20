@@ -1,0 +1,49 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color: #d2d2d2;
+    border-width: 5px;
+    box-shadow: 0 1px 0 #cfcfcf;
+}
+
+h4 {
+    border: 0 solid #fff;
+    border-bottom-width: 1px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.btn-dark {
+    background: #808080;
+    border-color: #808080;
+}
+    .btn-dark:hover {
+        background: #696969;
+        border-color: #696969;
+    }
+    .btn-dark:focus {
+        background: #696969;
+        border-color: #696969;
+    }
+
+.login-container {
+    width: 100%;
+    text-align: center;
+    margin-left: -5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
