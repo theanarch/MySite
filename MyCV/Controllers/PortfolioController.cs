@@ -3,8 +3,6 @@
 
 namespace MyCV.Controllers
 {
-    
-    
     public class PortfolioController : Controller
     {
         [HttpGet]

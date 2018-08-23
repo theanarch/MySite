@@ -6,14 +6,9 @@ using System.Web.Mvc;
 
 namespace MyCV.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
-        [HttpGet]
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+        // GET: Account
         [HttpGet]
         public ActionResult Login()
         {
